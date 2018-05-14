@@ -28,8 +28,8 @@ router.post('/', function(req, res, next) {
       console.log("Error connecting: ", err);
       res.sendStatus(500);
     }
-    client.query("INSERT INTO users (username, password, real_name, email, bio) VALUES ($1, $2, $3, $4, $5) RETURNING id",
-      [saveUser.username, saveUser.password, saveUser.real_name, saveUser.email, saveUser.bio],
+    client.query("INSERT INTO users (username, password, name, email) VALUES ($1, $2, $3, $4);",
+      [saveUser.username, saveUser.password, saveUser.real_name, saveUser.email],
         function (err, result) {
           client.end();
 
