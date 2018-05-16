@@ -26,8 +26,6 @@
   <br />
   <div ng-show="showme">
 
-test Info
-
     <br></br>
     <div id="inputContainer" layout=column layout-align="center center">
       <input id="editInput" ng-model="ic.changeInfo.username" type="text" placeholder="username">
@@ -42,10 +40,6 @@ test Info
   </div>
   <h6 layout=row layout-align="center center">Your Recent Reviews</h6>
   <div id="revList">
-    <div ng-cloak layout=column layout-align="space-around center" ng-repeat="reviews in ic.reviews.data">
-      <md-button ng-click="ic.revId = reviews.id ; ic.viewReview() ; ic.seeReview()">
-        <a href="#/review">{{reviews.game}} | {{reviews.title}}</a>
-      </md-button>
     </div>
   </div>
 </div>
