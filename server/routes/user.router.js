@@ -3,7 +3,7 @@ var router = express.Router();
 var pool = require('../modules/pool.js');
 // Handles Ajax request for user information if user is authenticated
 router.get('/', function(req, res) {
-  // check if logged in
+  // check if authorised
   if(req.isAuthenticated()) {
     // send back user object from database    
     var userInfo = {
